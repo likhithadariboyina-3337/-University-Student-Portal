@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Services Portal</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="home.css">
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span>UniServices Portal</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#overview" class="active"><i class="fa-solid fa-house"></i> Overview</a>
+            <a href="#admissions"><i class="fa-solid fa-user-plus"></i> Admissions</a>
+            <a href="#examination"><i class="fa-solid fa-file-lines"></i> Examination</a>
+            <a href="#certificates"><i class="fa-solid fa-certificate"></i> Certificates</a>
+            <a href="#scholarships"><i class="fa-solid fa-award"></i> Scholarships</a>
+            <a href="#support"><i class="fa-solid fa-headset"></i> Support</a>
+        </nav>
+        <div class="nav-user">
+            <span class="user-name">Student Account (ID: STD-2026-894)</span>
+            <div class="avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Student Profile Picture">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- 1. Overview Section -->
+        <section id="overview" class="content-section">
+            <div class="hero-banner">
+                <div class="hero-text">
+                    <h2>Welcome to Student Services Portal</h2>
+                    <p>Manage your academic journey, exam registrations, financial aid, and official credentials seamlessly.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" alt="University Campus">
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon bg-blue"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="stat-info">
+                        <h3>Current CGPA</h3>
+                        <p class="stat-value">3.85 / 4.0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-green"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div class="stat-info">
+                        <h3>Active Requests</h3>
+                        <p class="stat-value">2 Processing</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-purple"><i class="fa-solid fa-award"></i></div>
+                    <div class="stat-info">
+                        <h3>Scholarship Status</h3>
+                        <p class="stat-value text-success">Approved ($5,000)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Admissions Section -->
+        <section id="admissions" class="content-section">
+            <div class="section-header">
+                <h2>Admissions & Enrollment Services</h2>
+                <p>Track your application status, semester registration, and program progression.</p>
+            </div>
+            <div class="card grid-2">
+                <div>
+                    <h3>Current Enrollment Status</h3>
+                    <ul class="status-list">
+                        <li><strong>Program:</strong> Bachelor of Science in Computer Science</li>
+                        <li><strong>Academic Year:</strong> 2025 - 2026 (Semester IV)</li>
+                        <li><strong>Enrollment Status:</strong> <span class="badge badge-success">Fully Registered</span></li>
+                        <li><strong>Advisor:</strong> Department Coordinator</li>
+                    </ul>
+                </div>
+                <div class="action-box">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&auto=format&fit=crop&q=80" alt="Admissions registration" class="section-preview-img">
+                    <h3>Next Semester Pre-Registration</h3>
+                    <p>Fall registration window opens soon. Plan your electives and clear any holds.</p>
+                    <button class="btn btn-primary" onclick="openModal('Registration Portal', 'Pre-registration window is open. Select your preferred slot and electives.')"><i class="fa-solid fa-pen-to-square"></i> Open Registration Portal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Examination Services Section -->
+        <section id="examination" class="content-section">
+            <div class="section-header">
+                <h2>Examination Services</h2>
+                <p>Access hall tickets, download timetables, apply for re-evaluation, and check backlogs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=400&auto=format&fit=crop&q=80" alt="Hall Ticket">
+                    </div>
+                    <h4>Hall Ticket / Admit Card</h4>
+                    <p>Download semester examination admit cards with verified barcode & exam hall allocation.</p>
+                    <button class="btn btn-outline" onclick="openPDFViewer('Semester Hall Ticket - Admit Card', 'HALL-TICKET-2026-SEM4.pdf')"><i class="fa-solid fa-download"></i> Download PDF</button>
+                </div>
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&auto=format&fit=crop&q=80" alt="Timetable">
+                    </div>
+                    <h4>Exam Timetable</h4>
+                    <p>View complete room-wise and date-wise schedules for mid-terms and finals.</p>
+                    <button class="btn btn-outline" onclick="openPDFViewer('Official Examination Timetable 2026', 'EXAM-TIMETABLE-2026.pdf')"><i class="fa-solid fa-eye"></i> View Timetable</button>
+                </div>
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&auto=format&fit=crop&q=80" alt="Re-evaluation">
+                    </div>
+                    <h4>Re-evaluation / Retotalling</h4>
+                    <p>Submit papers for answer script re-checking within 14 days of grade publication.</p>
+                    <button class="btn btn-outline" onclick="openModal('Re-evaluation Application', 'Select subjects for answer script re-checking.')">Apply Request</button>
+                </div>
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&auto=format&fit=crop&q=80" alt="Backlogs">
+                    </div>
+                    <h4>Supplementary & Backlogs</h4>
+                    <p>Register for backlog improvement examinations and check supplementary calendars.</p>
+                    <button class="btn btn-outline" onclick="openModal('Supplementary Backlog Portal', 'Select pending backlog courses for upcoming semester examinations.')">Register Backlogs</button>
+                </div>
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=400&auto=format&fit=crop&q=80" alt="Grade Cards">
+                    </div>
+                    <h4>Grade Cards & Transcripts</h4>
+                    <p>Official cumulative grade point average transcripts and semester reports.</p>
+                    <button class="btn btn-outline" onclick="openPDFViewer('Official Academic Transcript', 'TRANSCRIPT-CGPA-3.85.pdf')">Access Reports</button>
+                </div>
+                <div class="service-card">
+                    <div class="card-img-wrap">
+                        <!-- Updated Exam Grievances image representing support, helpdesk, and query resolution -->
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&auto=format&fit=crop&q=80" alt="Exam Grievances Support">
+                    </div>
+                    <h4>Exam Grievances</h4>
+                    <p>Report discrepancies in question papers, seating arrangements, or invigilation.</p>
+                    <button class="btn btn-outline" onclick="openModal('Exam Grievance Portal', 'Lodge your examination discrepancy ticket here.')">Raise Ticket</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Certificates Section -->
+        <section id="certificates" class="content-section">
+            <div class="section-header">
+                <h2>Certificates & Reference Verification</h2>
+                <p>Request official university credentials and track existing reference numbers securely.</p>
+            </div>
+            
+            <div class="card mb-4">
+                <h3>Request New Certificate</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Select Certificate Type</label>
+                        <select class="form-control" id="certType">
+                            <option>Bonafide Student Certificate</option>
+                            <option>Migration Certificate</option>
+                            <option>Provisional Degree Certificate</option>
+                            <option>Official Medium of Instruction Letter</option>
+                            <option>Conduct & Character Certificate</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Purpose / Destination</label>
+                        <input type="text" class="form-control" id="certPurpose" placeholder="e.g., Visa Processing, Higher Studies">
+                    </div>
+                    <div class="form-group align-end">
+                        <button class="btn btn-primary w-100" onclick="submitCertificateRequest()"><i class="fa-solid fa-paper-plane"></i> Submit Request</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Active Certificate References & Status</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Reference ID</th>
+                                <th>Certificate Type</th>
+                                <th>Requested Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="certTableBody">
+                            <tr>
+                                <td><code>REF-2026-UNI-8921</code></td>
+                                <td>Bonafide Student Certificate</td>
+                                <td>28 Sep 2026</td>
+                                <td><span class="badge badge-success">Completed</span></td>
+                                <td><button class="btn-sm btn-primary" onclick="openPDFViewer('Bonafide Student Certificate', 'REF-2026-UNI-8921.pdf')">Download</button></td>
+                            </tr>
+                            <tr>
+                                <td><code>REF-2026-UNI-7412</code></td>
+                                <td>Migration Certificate</td>
+                                <td>01 Oct 2026</td>
+                                <td><span class="badge badge-warning">Processing</span></td>
+                                <td><button class="btn-sm btn-disabled" disabled>Pending</button></td>
+                            </tr>
+                            <tr>
+                                <td><code>REF-2025-UNI-3310</code></td>
+                                <td>Official Transcript (Sem I-III)</td>
+                                <td>15 Nov 2025</td>
+                                <td><span class="badge badge-success">Verified & Dispatched</span></td>
+                                <td><button class="btn-sm btn-primary" onclick="openPDFViewer('Official Transcript', 'REF-2025-UNI-3310.pdf')">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Scholarships Section -->
+        <section id="scholarships" class="content-section">
+            <div class="section-header">
+                <h2>Scholarships & Financial Aid</h2>
+                <p>Explore institutional merit grants, need-based assistance, and external fellowships.</p>
+            </div>
+            
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>National Academic Excellence Merit</h4>
+                        <span class="sch-amount">$5,000 / yr</span>
+                    </div>
+                    <p class="sch-desc">Awarded to top 5% students maintaining a CGPA of 3.8 or higher in professional bachelor programs.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-circle-check text-success"></i> Eligible</span>
+                        <button class="btn-sm btn-primary" onclick="openModal('National Academic Excellence Merit Application', 'Verify your transcripts and submit your application for the $5,000/yr merit grant.')">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>Need-Based Financial Support</h4>
+                        <span class="sch-amount">Up to 100% Tuition</span>
+                    </div>
+                    <p class="sch-desc">Comprehensive tuition fee waiver based on household annual income verification and tax records.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-clock text-warning"></i> Under Review</span>
+                        <button class="btn-sm btn-outline" onclick="openModal('Need-Based Financial Support Details', 'Your tax document has been received and is currently under financial audit review.')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>Women in STEM Fellowship</h4>
+                        <span class="sch-amount">$4,000 / yr</span>
+                    </div>
+                    <p class="sch-desc">Encouraging women enrollment in Computer Science, Engineering, and Data Science majors.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-circle-plus"></i> Open</span>
+                        <button class="btn-sm btn-primary" onclick="openModal('Women in STEM Fellowship Application', 'Submit your statement of purpose and academic profile.')">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>University Athletic Achievement Grant</h4>
+                        <span class="sch-amount">$3,000 / yr</span>
+                    </div>
+                    <p class="sch-desc">For active student athletes representing state or national university sports championships.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-circle-plus"></i> Open</span>
+                        <button class="btn-sm btn-primary" onclick="openModal('Athletic Achievement Grant Application', 'Attach sports participation certificates and recommendation letters.')">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>Undergraduate Research Grant</h4>
+                        <span class="sch-amount">$2,500 one-time</span>
+                    </div>
+                    <p class="sch-desc">Funding support for students publishing peer-reviewed papers under faculty mentorship.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-circle-plus"></i> Open</span>
+                        <button class="btn-sm btn-primary" onclick="openModal('Undergraduate Research Grant Application', 'Provide faculty mentor approval and research abstract.')">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="scholarship-card">
+                    <div class="sch-header">
+                        <h4>Global Student Exchange Mobility Aid</h4>
+                        <span class="sch-amount">$6,000 stipend</span>
+                    </div>
+                    <p class="sch-desc">Partial travel and living cost grant for semester exchange programs with partner universities abroad.</p>
+                    <div class="sch-footer">
+                        <span><i class="fa-solid fa-ban text-danger"></i> Closed</span>
+                        <button class="btn-sm btn-disabled" disabled>Closed</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Student Support Section -->
+        <section id="support" class="content-section">
+            <div class="section-header">
+                <h2>Student Support Desk</h2>
+                <p>Get quick help from academic advisors, IT service desk, and psychological counseling.</p>
+            </div>
+            <div class="card">
+                <h3>Submit a Support Ticket</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select class="form-control" id="supportCategory">
+                            <option>IT & Learning Management System (LMS)</option>
+                            <option>Fee Payment & Accounts</option>
+                            <option>Hostel & Campus Accommodation</option>
+                            <option>Academic Counseling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Issue Subject</label>
+                        <input type="text" class="form-control" id="supportSubject" placeholder="Brief summary of your issue">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Description</label>
+                    <textarea class="form-control" id="supportDesc" rows="3" placeholder="Provide details..."></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="submitSupportTicket()"><i class="fa-solid fa-paper-plane"></i> Send Ticket</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Generic Modal Dialog -->
+    <div id="appModal" class="modal-backdrop">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal Title</h3>
+                <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                Modal content goes here.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal()">Close</button>
+                <button class="btn btn-primary" onclick="confirmModalAction()">Proceed</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="modal-backdrop">
+        <div class="pdf-box">
+            <div class="modal-header">
+                <h3 id="pdfTitle"><i class="fa-solid fa-file-pdf text-danger"></i> Document Viewer</h3>
+                <button class="modal-close" onclick="closePDFViewer()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="pdf-content">
+                <div class="pdf-simulated-page">
+                    <div class="pdf-watermark">UNIVERSITY OFFICIAL DOCUMENT</div>
+                    <h2 id="pdfDocName">Document Name</h2>
+                    <p class="pdf-meta">Generated for: Student Account (ID: STD-2026-894)</p>
+                    <hr style="margin: 15px 0; border:0; border-top:1px solid #ccc;">
+                    <p>This certifies that the requested service record or certificate has been securely verified through the university database system.</p>
+                    <br>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-top:40px;">
+                        <div>
+                            <p><strong>Verification Code:</strong> <span id="pdfRefCode">REF-98421-UNI</span></p>
+                            <p><strong>Status:</strong> Authenticated & Valid</p>
+                        </div>
+                        <div style="border: 2px solid #333; padding: 10px; text-align:center; font-size:11px;">
+                            [ SECURE QR CODE ]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closePDFViewer()">Close</button>
+                <button class="btn btn-primary" onclick="alert('Downloading document...')"><i class="fa-solid fa-download"></i> Download Official Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 University Student Services Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        function openModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerHTML = `<p>${text}</p><br><div class="form-group"><label>Additional Notes / Upload File</label><input type="file" class="form-control"></div>`;
+            document.getElementById('appModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('appModal').style.display = 'none';
+        }
+
+        function confirmModalAction() {
+            alert('Your request/application has been successfully submitted!');
+            closeModal();
+        }
+
+        function openPDFViewer(docName, refCode) {
+            document.getElementById('pdfDocName').innerText = docName;
+            document.getElementById('pdfRefCode').innerText = refCode;
+            document.getElementById('pdfModal').style.display = 'flex';
+        }
+
+        function closePDFViewer() {
+            document.getElementById('pdfModal').style.display = 'none';
+        }
+
+        function submitCertificateRequest() {
+            const type = document.getElementById('certType').value;
+            const purpose = document.getElementById('certPurpose').value || 'General Use';
+            const randomRef = 'REF-2026-UNI-' + Math.floor(1000 + Math.random() * 9000);
+            
+            const tableBody = document.getElementById('certTableBody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td><code>${randomRef}</code></td>
+                <td>${type} (${purpose})</td>
+                <td>Today</td>
+                <td><span class="badge badge-warning">Processing</span></td>
+                <td><button class="btn-sm btn-disabled" disabled>Pending</button></td>
+            `;
+            tableBody.prepend(newRow);
+            alert('Certificate request submitted successfully! Reference ID: ' + randomRef);
+            document.getElementById('certPurpose').value = '';
+        }
+
+        function submitSupportTicket() {
+            const subject = document.getElementById('supportSubject').value;
+            if(!subject) {
+                alert('Please provide an issue subject.');
+                return;
+            }
+            alert('Support ticket successfully submitted! Our team will respond within 24 hours.');
+            document.getElementById('supportSubject').value = '';
+            document.getElementById('supportDesc').value = '';
+        }
+    </script>
+
+</body>
+</html>
